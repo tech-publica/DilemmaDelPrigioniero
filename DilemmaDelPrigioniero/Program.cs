@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DilemmaDelPrigioniero.Competition;
+using System;
 
 namespace DilemmaDelPrigioniero
 {
@@ -7,6 +8,10 @@ namespace DilemmaDelPrigioniero
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var t = new Tournament();
+            t.Giostra();
+            t.Sort();
+            t.ShowResults();
         }
     }
 }
