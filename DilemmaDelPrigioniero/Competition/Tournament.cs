@@ -7,7 +7,7 @@ namespace DilemmaDelPrigioniero.Competition
 {
     public class Tournament
     {
-        public const int NUM_CLONES = 3;
+        public const int NUM_CLONES = 2;
         public const int NUM_MATCHES = 100;
 
         public const int BOTH_COOPERATE_SCORE = 50;
@@ -28,6 +28,7 @@ namespace DilemmaDelPrigioniero.Competition
                 //players.Add(di);
                 players.Add(new DummyPlayer());
                 players.Add(new BastardInside());
+                players.Add(new DrunkPlayer());
             }
 
             for (int i = 0; i <players.Count; i++)
@@ -39,6 +40,18 @@ namespace DilemmaDelPrigioniero.Competition
                 players[x] = players[y];
                 players[y] = temp;
             }
+        }
+
+        public void RemoveLast()
+        {
+            players.RemoveAt(players.Count - 1);
+        }
+
+        public void CloneAt(int index)
+        {
+            var p = players[index];
+            Player clone = (Player) Activator.CreateInstance(p.GetType());
+            players.Add(clone);
         }
 
         public void Giostra()
@@ -62,7 +75,17 @@ namespace DilemmaDelPrigioniero.Competition
 
         public void Sort()
         {
+           // Extensions.BubbleSortComparable(players);
             players.Sort(new PlayerComparer());
+        }
+
+
+        public void Reset()
+        {
+            foreach(var p in players)
+            {
+                p.Reset();
+            }
         }
 
         private void Giostra(Player p1, Player p2)

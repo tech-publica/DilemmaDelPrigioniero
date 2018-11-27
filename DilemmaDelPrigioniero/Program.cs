@@ -1,5 +1,7 @@
 ﻿using DilemmaDelPrigioniero.Competition;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DilemmaDelPrigioniero
 {
@@ -7,11 +9,12 @@ namespace DilemmaDelPrigioniero
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            var t = new Tournament();
-            t.Giostra();
-            t.Sort();
-            t.ShowResults();
+            //var t = new Tournament();
+            //t.Giostra();
+            //t.Sort();
+            //t.ShowResults();
+            var e = new Evolution();
+            e.Evolve();
         }
     }
 }
