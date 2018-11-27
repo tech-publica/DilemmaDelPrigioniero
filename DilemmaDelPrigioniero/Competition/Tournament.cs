@@ -75,8 +75,8 @@ namespace DilemmaDelPrigioniero.Competition
 
         public void Sort()
         {
-           // Extensions.BubbleSortComparable(players);
-            players.Sort(new PlayerComparer());
+            Extensions.BubbleSortComparable(players);
+            //players.Sort(new PlayerComparer());
         }
 
 
