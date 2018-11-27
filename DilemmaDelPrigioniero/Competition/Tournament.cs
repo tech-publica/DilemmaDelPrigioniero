@@ -7,13 +7,13 @@ namespace DilemmaDelPrigioniero.Competition
 {
     public class Tournament
     {
-        public const int NUM_CLONES = 2;
+        public const int NUM_CLONES = 3;
         public const int NUM_MATCHES = 100;
 
         public const int BOTH_COOPERATE_SCORE = 50;
         public const int BOTH_DEFECT_SCORE = 30;
         public const int ONLY_ONE_COOPERATE_SCORE = 0;
-        public const int ONLY_ONE_DEFECT_SCORE = 110;
+        public const int ONLY_ONE_DEFECT_SCORE = 80;
 
         private Random dice;
 
@@ -24,11 +24,19 @@ namespace DilemmaDelPrigioniero.Competition
 
             for (int i = 0; i < NUM_CLONES; i++)
             {
-                //DummyPlayer di = new DummyPlayer();
-                //players.Add(di);
+
                 players.Add(new DummyPlayer());
                 players.Add(new BastardInside());
                 players.Add(new DrunkPlayer());
+                players.Add(new Tit4Tat());
+                players.Add(new Matteo());
+                players.Add(new AlwaysNo());
+                players.Add(new MyPlayerAl5());
+                players.Add(new MyPlayer_Al6());
+                players.Add(new GianPlayer());
+                players.Add(new Nplayer());
+                players.Add(new RickDeckard());
+                players.Add(new VengefulPlayer());
             }
 
             for (int i = 0; i <players.Count; i++)

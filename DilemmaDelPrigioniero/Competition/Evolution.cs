@@ -7,7 +7,7 @@ namespace DilemmaDelPrigioniero.Competition
     public class Evolution
     {
         private const int NUM_EPOCHS = 1000;
-        private const int NUM_CHANGES = 1;
+        private const int NUM_CHANGES = 5;
         private Tournament tournament;
         public Evolution()
         {

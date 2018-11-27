@@ -19,11 +19,9 @@ namespace DilemmaDelPrigioniero
                     if (res > 0)
                     {
                         Swap(myList, j, j + 1);
-                        //SwapWrong( array[j],  array[j + 1]);
                     }
                 }
             }
-
         }
         private static void Swap<T>(IList<T> a, int j, int v)
         {
